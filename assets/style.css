@@ -49,9 +49,12 @@
 
 .fiveDayForecast{
     background-color: blue;
-    color: white;
-    width: 18%;
+    color: white;   
     float: left;
-    margin-right: 2%;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 18%;
+    min-width: 150px;
 }
 

@@ -28,13 +28,28 @@ $("#city-list").on("click", (event) =>{
 
 // adds buttons to the cityList div
 function cityListPopulator(cityVal){
-    // creates and appends
-    let cityEL = $("<button>");
-    cityEL.text(cityVal);
-    cityEL.attr("class", "btn btn-block cityListBtn");
-    $("#city-list").prepend(cityEL);
+    let alreadyMade = false;
     // saves the last city to be added to the city-list div in local storage
     localStorage.setItem("lastCity", cityVal)
+    $(".cityListBtn").each(function(){
+
+        if(cityVal === $(this).text()){
+            console.log("inside")
+            alreadyMade = true
+            return alreadyMade;
+        }
+    });
+    if(!alreadyMade){
+
+        // creates and appends
+        let cityEL = $("<button>");
+        cityEL.text(cityVal);
+        cityEL.attr("class", "btn btn-block cityListBtn");
+        cityEL.attr("data-city", cityVal);
+        $("#city-list").prepend(cityEL);
+    }
+    
+
 }
 
 function whoYouGonnaCall (cityVal){
@@ -128,7 +143,6 @@ function whoYouGonnaCall (cityVal){
 // when the page loads populate with data from the last searched city
 whoYouGonnaCall(localStorage.getItem("lastCity"));
 cityListPopulator(localStorage.getItem("lastCity"));
-
 
 // to do list: 
 // make it responsive and mobile friendly
