@@ -1,5 +1,7 @@
 # Weather_Dashboard
 
+Stay up to date with the weather for the locations you need, with current weather reports and a 5 day forecast.
+
 -----
 
 ## Links
