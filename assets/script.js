@@ -145,6 +145,5 @@ whoYouGonnaCall(localStorage.getItem("lastCity"));
 cityListPopulator(localStorage.getItem("lastCity"));
 
 // to do list: 
-// make it responsive and mobile friendly
 // update the css and improve appearance
 // round the degrees to 2 decimals
