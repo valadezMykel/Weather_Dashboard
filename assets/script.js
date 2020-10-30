@@ -57,7 +57,7 @@ function whoYouGonnaCall (cityVal){
     // 1 get api key
     let apiKey = "46c83042b2cdf276d685079cb38dbf65";
     // 2 get query url
-    let apiUrl = "http://api.openweathermap.org/data/2.5/weather?q="+cityVal+"&units=imperial&appid="+apiKey;
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityVal+"&units=imperial&appid="+apiKey;
     // 3 send call and then function
     $.ajax({
         url: apiUrl,
@@ -76,7 +76,7 @@ function whoYouGonnaCall (cityVal){
 
         // begin populating button forecast div
         $("#cityNameDate").text((cityName)+" "+moment().format('L'));
-        $("#cityNameDate").append($("<img>").attr("src",  "http://openweathermap.org/img/wn/"+ response.weather[0].icon+"@2x.png" ));
+        $("#cityNameDate").append($("<img>").attr("src",  "https://openweathermap.org/img/wn/"+ response.weather[0].icon+"@2x.png" ));
         $("#temp").html("Temperature: "+(response.main.temp)+ '9&#176'+"F");
         $("#humidity").text(response.main.humidity + "%");
         $("#windSpeed").text(response.wind.speed + " MPH");
@@ -85,7 +85,7 @@ function whoYouGonnaCall (cityVal){
         let lon = response.coord.lon;
         let lat = response.coord.lat;
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid="+apiKey,
+            url: "https://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid="+apiKey,
             method: "GET"
         }).then((response) =>{
             let uvi = response.value;
@@ -127,7 +127,7 @@ function whoYouGonnaCall (cityVal){
                 
                 // adds the weather info to the div
                 forecastDiv.prepend($("<p>").text(date));
-                forecastDiv.append($("<img>").attr("src", "http://openweathermap.org/img/wn/"+dailyForecastArr[i].weather[0].icon+"@2x.png"));
+                forecastDiv.append($("<img>").attr("src", "https://openweathermap.org/img/wn/"+dailyForecastArr[i].weather[0].icon+"@2x.png"));
                 forecastDiv.append($("<p>").html("Temp: "+dailyForecastArr[i].temp.day+'9&#176'+"F"));
                 forecastDiv.append($("<p>").text("Humidity: "+dailyForecastArr[i].humidity+"%"));
                 $("#fiveDay").append(forecastDiv);
