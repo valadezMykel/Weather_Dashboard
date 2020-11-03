@@ -23,6 +23,8 @@ For a link to the deployed project click [here](https://valadezmykel.github.io/W
 * [Questions](#questions)
 
 
+![Usage Video](./assets/videosForReadme/weatherDashboardRecording.mov)
+
 ## About the Project
 
 This project displays the weather of any city for the next five days.
