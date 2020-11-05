@@ -23,7 +23,7 @@ For a link to the deployed project click [here](https://valadezmykel.github.io/W
 * [Questions](#questions)
 
 
-![Usage Video](assets/videosForReadme/weatherDashboardRecording.mov)
+[![Usage Video](https://i9.ytimg.com/vi/NfWFzhiB6QU/mq1.jpg?sqp=CNTWkf0F&rs=AOn4CLAdUQA2-vINN8D7sP4qC7mfdRbeLA)](https://youtu.be/NfWFzhiB6QU)
 
 ## About the Project
 
